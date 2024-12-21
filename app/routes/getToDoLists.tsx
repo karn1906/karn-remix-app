@@ -1,5 +1,6 @@
 import { toDoItems } from "./toDoList";
-
+import MyMenu from "./templates/mymenu";
+import MyFooter from "./templates/myfooter";
 function CompletedCheck ({c} : {c: boolean}) {
     if(c) return <span>🤢🤢</span>;
     return <span>🥶🥶</span>;
@@ -19,9 +20,12 @@ export default function toDolist() {
     </div>
     );
 return (
-    <div className="m-3">
+    
+    <div className="m-0">
+        <MyMenu />
     <h1 className="text-xl">สิ่งที่ต้องทำ ...</h1>
     {ListItems}
+        <MyFooter />
     </div>
     );
 }
